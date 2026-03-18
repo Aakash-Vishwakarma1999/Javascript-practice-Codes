@@ -272,6 +272,245 @@ console.log(count);
 
 
 
+// 4️⃣ Searching in Arrays (10 Questions)
+
+// Find the index of a specific value.
+let arr=[1,2,3,2,4,5,3,1,5,6,7,8,2];
+const index = arr.indexOf(2);
+console.log(index);
+
+
+// Find the last occurrence of a value.
+let arr=[1,2,3,2,4,5,3,1,5,6,7,8,2];
+const index = arr.lastIndexOf(2);
+console.log(index);
+
+
+// Check if an array includes a value.
+let arr=[1,2,3,2,4,5,3,1,5,6,7,8,2];
+const includes = arr.includes(3);
+console.log(includes);
+
+
+// Find the first element greater than 10.
+let arr=[1,2,3,2,4,11,13,12,10,5,3,1,5,6,7,8,2];
+const greater = arr.find(e=>{
+    return e>10
+})
+console.log(greater);
+
+
+// Find the index of first even number.
+let arr=[1,2,3,2,4,11,13,12,10,5,3,1,5,6,7,8,2];
+let index = arr.findIndex((e)=>{
+    return e%2 === 0
+})
+console.log(index);
+
+
+// Find the first string longer than 5 characters.
+let arr = ["apple", "banana", "cherry", "mango", "grape"];
+let str = arr.find(e=>{
+    return e.length>5
+})
+console.log(str);
+
+
+// Find if any number is negative.
+let arr=[1,2,3,2,4,-11,13,12,10,5,3,1,5,6,-7,8,2];
+let neg = arr.some(e=>{ //checks if any match exists
+    return e<0;
+})
+console.log(neg);
+
+
+// Check if all numbers are positive.
+let arr=[1,2,3,2,4,-11,13,12,10,5,3,1,5,6,-7,8,2];
+let pos = arr.every(e=> e>0);// check if every elem is >0
+console.log(pos);
+
+
+// Find the position of "apple" in an array.
+let arr = [ "banana", "cherry","apple", "mango", "grape","apple"];
+let position = arr.indexOf("apple");
+console.log(position);
+
+
+// Find the first number divisible by 5.
+let arr=[1,2,3,2,4,-11,13,12,10,5,3,1,5,6,-7,8,2];
+let div = arr.find(e=> e%5 == 0);
+console.log(div);
+
+
+
+
+// 5️⃣ Array Modification (splice, slice) (10 Questions)
+
+// Extract the first 3 elements using slice.
+let arr=[1,2,3,2,4,-11,13,12,10,5,3,1,5,6,-7,8,2];
+let elem = arr.slice(0,3);// start at 0 end before 3
+console.log(elem);
+
+
+// Extract the last 2 elements.
+let arr=[1,2,3,2,4,-11,13,12,10,5,3,1,5,6,-7,8,2];
+console.log(arr.slice(arr.length-2,arr.length));
+
+
+// Remove 2 elements starting from index 3.
+let arr=[1,2,3,2,4,-11,13,12,10,5,3,1,5,6,-7,8,2];
+arr.splice(3,2);//splice affects the original array 
+console.log(arr);
+
+
+// Insert "orange" at index 2.
+let arr = [ "banana", "cherry","apple", "mango", "grape","apple"];
+arr.splice(2,0,"Orange")
+console.log(arr);
+
+
+// Replace 2 elements starting at index 1.
+let arr = ["banana", "cherry", "apple", "mango", "grape", "apple"];
+
+arr.splice(1, 2, "orange", "kiwi"); // replace 2 elements
+console.log(arr);
+
+// Copy an array using slice().
+let arr = ["banana", "cherry", "apple", "mango", "grape", "apple"];
+console.log(arr.slice(0,arr.length));
+
+
+// Remove the middle element.
+let arr = ["banana", "cherry", "apple", "mango", "grape", "apple"];
+let mid = Math.floor(arr.length)/2
+arr.splice(mid,1)
+console.log(arr);
+
+// Insert multiple elements in the middle.
+let arr = ["banana", "cherry", "apple", "mango", "grape", "apple"];
+let mid= Math.floor(arr.length)/2
+arr.splice(mid,0,"middle1","middle2")
+console.log(arr);
+
+
+// Create a subarray from index 2 to 5.
+let arr = ["banana", "cherry", "apple", "mango", "grape", "apple"];
+let subarray = arr.slice(2,5);
+console.log(subarray);
+
+
+// Remove an element without changing the original array.
+let arr = ["banana", "cherry", "apple", "mango", "grape", "apple"];
+let indexToRemove =2;
+
+let newArr= [...arr.slice(0,indexToRemove),...arr.slice(indexToRemove+1)]
+console.log(newArr);
+
+
+
+// 6️⃣ Advanced Array Problems (10 Questions)
+
+// Remove duplicate values from an array.
+let arr = [1,2,3,2,4,-11,13,12,10,5,3,1,5,6,-7,8,2];
+
+let unique = [...new Set(arr)];
+console.log(unique);
+
+let arr = [1,2,3,2,4,-11,13,12,10,5,3,1,5,6,-7,8,2];
+let filtered = arr.filter((elem,index)=>{
+     return arr.indexOf(elem)== index
+})
+console.log(filtered);
+
+
+
+// Flatten a nested array.
+let arr = [1, 2, [3, 4], 5, [6, 7, 8]];
+
+let flatArr = arr.flat();
+console.log(flatArr);
+
+
+// Find the second largest number.
+let arr = [1,2,3,2,4,-11,13,12,10,5,3,1,5,6,-7,8,2];
+let unique =[...new Set(arr)];
+unique.sort((a,b)=> b-a)
+
+let secondLargest =unique[1]
+console.log(secondLargest);
+
+
+// Group numbers into even and odd arrays.
+let arr = [1,2,3,2,4,13,12,10,5,3,1,5,6,8,2];
+const even = arr.filter(e=>{
+    return e%2==0
+})
+const off = arr.filter(e=>{
+    return e%2!==0
+})
+console.log(even);
+console.log(off);
+
+
+// Count occurrences of each element.
+let arr = [1,2,3,2,4,13,12,10,5,3,1,5,6,8,2];
+
+let count = arr.reduce((acc, curr) => {
+  acc[curr] = (acc[curr] || 0) + 1;
+  return acc;
+}, {});
+
+console.log(count);
+
+
+// Find the intersection of two arrays.
+let arr1 = [1, 2, 3, 4, 5];
+let arr2 = [3, 4, 5, 6, 7];
+let intersection = arr1.filter(e=> arr2.includes(e))
+console.log(intersection);
+
+
+// Merge two arrays without duplicates.
+let arr1 = [1, 2, 3, 4, 5];
+let arr2 = [3, 4, 5, 6, 7];
+
+let arr3=[...arr1, ...arr2]
+console.log([... new Set(arr3)]);
+
+
+// Rotate an array left by 1 position.
+let arr = [1, 2, 3, 4, 5];
+let first = arr.shift();
+arr.push(first);
+console.log(arr);
+
+
+// Rotate an array right by 1 position.
+let arr = [1, 2, 3, 4, 5];
+let last = arr.pop(); //removes last element
+arr.unshift(last);
+console.log(arr);
+
+
+// Shuffle elements of an array randomly.
+let arr = [1, 2, 3, 4, 5];
+
+for (let i = arr.length - 1; i > 0; i--) {
+  let j = Math.floor(Math.random() * (i + 1));
+  
+  // swap
+  [arr[i], arr[j]] = [arr[j], arr[i]];
+}
+
+console.log(arr);
+
+
+
+
+
+
+
+
 
 
 
