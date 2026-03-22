@@ -190,8 +190,9 @@ function memoizeAdd() {
 
     return function (value1, value2) {
         const key = `${value1},${value2}`;
-
-        if (cache[key] !== undefined) {
+        // console.log(key);
+        // console.log(cache[key])
+        if (cache[key] !== undefined) { // for 1st itreration cache[2,3] = undefined because value is not yet assigned to the key
             return `From cache ${cache[key]}`
         }
 
@@ -205,6 +206,8 @@ const memoAdd = memoizeAdd();
 
 console.log(memoAdd(2, 3));
 console.log(memoAdd(2, 3));
+console.log(memoAdd(5, 1));
+console.log(memoAdd(5, 1));
 
 
 

@@ -10,7 +10,7 @@ function sum(...nums){ //rest operator
     
     for(let i=0; i< arr.length; i++){
         const arrval = arr[i];
-         sumofall = sumofall+arrval;
+         sumofall = sumofall+arrval; 
     }
     console.log(sumofall);
     
@@ -130,7 +130,9 @@ calculateTotal(100,10,5,3);
 const nums2 = [1,2,3];
 
 function display(a,...rest){
-console.log(a,...rest);
+console.log(a,...rest); // here we are destructuring thr array ...rest
+console.log(rest); // this will give an array output
+
 
 }
 display(...nums2)

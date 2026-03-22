@@ -115,3 +115,90 @@ const person1 = {
 for (let key in person1) {
     console.log(key, person1[key]);
 }
+
+
+
+// 🔄 Intermediate Level (OOP Principles)
+// Create a class Animal and extend it into Dog and Cat. Add different sounds.
+class Animal {
+    constructor(sound) {
+        this.sound = sound
+    }
+    makeSound(){
+        console.log(this.sound);
+        
+    }   
+}
+class Dog extends Animal {
+    constructor(bark){
+        super(bark);
+    }
+}
+class Cat extends Animal {
+    constructor(meow){
+        super(meow)
+    }
+}
+
+const d= new Dog("bark");
+d.makeSound();
+const c= new Cat("Meow");
+c.makeSound();
+
+// Use inheritance to reuse methods from a parent class.
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+
+    eat() {
+        console.log(`${this.name} is eating`);
+    }
+}
+
+class Dog extends Animal {
+    bark() {
+        console.log(`${this.name} is barking`);
+    }
+}
+
+class Cat extends Animal {
+    meow() {
+        console.log(`${this.name} is meowing`);
+    }
+}
+
+const d = new Dog("Tommy");
+d.eat();   // inherited from Animal
+d.bark();  // own method
+
+const c = new Cat("Kitty");
+c.eat();   // inherited from Animal
+c.meow();  // own method
+
+
+// Implement method overriding in a child class.
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+
+    eat() {
+        console.log(`${this.name} is eating`);
+    }
+}
+
+class Dog extends Animal{
+    eat(){
+        // super(); not used in overriding
+        console.log(`method of child : ${this.name} is eating`);
+        
+    }
+}
+const d = new Dog("rocky");
+d.eat();
+
+// Create a class with private properties using #.
+// Use getters and setters for a property.
+// Create a static method in a class and call it.
+// Implement encapsulation to restrict direct access to data.

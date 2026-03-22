@@ -30,7 +30,8 @@
 // console.log(counter);
 
 (() => {
-    let counter = 0;
+    // var counter = 0; // here var becomes function scoped instead of global window object but better to use let
+    let counter = 0; // better since it is block scoped
     counter++;
     console.log(counter);
 
@@ -38,7 +39,7 @@
 })();
 
 
-// 5️⃣ Private Variable Using IIFE Create an IIFE that keeps a variable private.
+// 5️⃣ Private Variable Using IIFE. Create an IIFE that keeps a variable private.
 //  Requirements variable count starts at 0 
 // return a function that increments count 
 // each call increases count
@@ -101,22 +102,22 @@ for (var i = 1; i <= 3; i++) {
 // getBalance()
 
 // Output → 1500
-const bankAccount =(function(){
+const bankAccount = (function () {
 
-    let balance =1000;
+    let balance = 1000;
 
-     function deposit(amount){
-        balance+= amount;
+    function deposit(amount) {
+        balance += amount;
     }
 
-     function getBalance(){
+    function getBalance() {
         return balance
     }
 
-     return {
-    deposit,
-    getBalance
-  };
+    return {
+        deposit,
+        getBalance
+    };
 })()
 
 bankAccount.deposit(500); //in order to access the functions we need to return it so that bankAccount variable could access them
@@ -128,11 +129,11 @@ console.log(bankAccount.getBalance());
 // outer function prints "Outer"
 // inner function prints "Inner"
 
-(function(){
+(function () {
     console.log('Outer');
-    (function(){
+    (function () {
         console.log("Inner");
-        
+
     })()
 
 })()
