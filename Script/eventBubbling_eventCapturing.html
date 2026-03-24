@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div id="grandparent">
+        <div id="parent">
+            <button id="child">Click Me</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("child").addEventListener("click",(e)=>{
+            console.log("child");
+            e.stopPropagation();
+            
+        }
+        )
+
+        document.getElementById("parent").addEventListener("click", () => console.log("parent"));
+
+    </script>
+</body>
+
+</html>
+
+<!-- 1st way to write event bubbling -->
+<!-- <body>
+
+    <div id="parent">
+        <button id="child">Click me</button>
+    </div>
+
+    <script>
+        document.getElementById("parent").addEventListener("click", ()=>{
+            console.log("Parent Clicked");
+            
+        })
+
+        document.getElementById("child").addEventListener("click", ()=>{
+            console.log("Child Clicked");
+            
+        })
+    </script>
+    
+</body> -->
+
+<!-- 2nd way to write event bubbling -->
+<!-- <body>
+    <div id="parent" onclick="parentMethod()">
+        comment this -- first child event will be called and it would bubble to parent and then grandparent 
+         <button id="child" onclick="childMethod()">Click me</button>
+         
+    </div>
+
+    <script>
+        function parentMethod(){
+            alert("parent clicked")
+        }
+        function childMethod(){
+            alert("child clicked")
+        }
+    </script>
+ </body> -->
+
+
+<!-- Event Capturing is when the event starts from the top (window/document) and goes down to the target element.
+  flow: window → document → parent → target -->
+<!-- 
+  <body>
+     <div id="parent">
+        <button id="child">Click me</button>
+    </div>
+
+    <script>
+        document.getElementById("parent").addEventListener("click", ()=>{
+            console.log("Parent clicked (capturing)");
+            },true) // true enables capturing i.e the flow is now from parent to child
+
+        document.getElementById("child").addEventListener("click",()=>{
+            console.log(" Child clicked");
+            
+        })
+
+        
+    </script>
+  </body> -->
+
+
+<!-- Another way of event capturing and bubbling together -->
+
+
+<!-- <body>
+    <div id="parent">
+        <button id="child">Click me</button>
+    </div>
+
+    <script>
+        document.getElementById("parent").addEventListener("click",
+            () => console.log("Parent Capture"),
+            true
+        );
+
+        document.getElementById("parent").addEventListener("click",
+            () => console.log("Parent Bubble")
+        );
+
+        document.getElementById("child").addEventListener("click", () =>
+            console.log("Child")
+        );
+
+    </script>
+</body> -->
+
+
+
+<!-- 5th practice code event bubbling: -->
+<!-- <body>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <script>
+        document.getElementById("list").addEventListener("click", function (e) {
+            console.log("Clicked:", e.target.textContent,e);
+        });
+
+    </script>
+</body> -->
+
+
+<!-- 6th example of event bubbling -->
+<!-- <body>
+    <div id="grandparent">
+        <div id="parent">
+            <button id="child">Click Me</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("grandparent").addEventListener("click", ()=> console.log("grandparent"));
+        document.getElementById("parent").addEventListener("click", ()=> console.log("parent"));
+        document.getElementById("child").addEventListener("click", ()=> console.log("child"));
+
+    </script>
+</body> -->
+
+
+
+
+<!-- 7 : event capturing example -->
+<!-- 
+
+<body>
+    <div id="grandparent">
+        <div id="parent">
+            <button id="child">Click Me</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("grandparent").addEventListener("click", ()=> console.log("grandparent"),true);
+        document.getElementById("parent").addEventListener("click", ()=> console.log("parent"),true);
+        document.getElementById("child").addEventListener("click", ()=> console.log("child"),true);
+
+    </script>
+</body> -->
+
+
+
+<!-- combination of both bubbling and capturing -->
+ <!-- <body>
+    <div id="grandparent">
+        <div id="parent">
+            <button id="child">Click Me</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("grandparent").addEventListener("click", () => console.log("grandparent capture"), true);
+        document.getElementById("parent").addEventListener("click", () => console.log("parent capture"), true);
+
+        document.getElementById("parent").addEventListener("click", () => console.log("parent bubble"));
+        document.getElementById("grandparent").addEventListener("click", () => console.log("grandparent bubble"));
+
+        document.getElementById("child").addEventListener("click", () => console.log("child"));
+
+    </script>
+</body> -->
+
+
+
+<!-- How to stop the propogation? i.e bubbling/capturing -->
+ <!-- <body>
+    <div id="grandparent">
+        <div id="parent">
+            <button id="child">Click Me</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("child").addEventListener("click",(e)=>{
+            console.log("child");
+            e.stopPropagation();
+            
+        }
+        )
+
+        document.getElementById("parent").addEventListener("click", () => console.log("parent"));
+
+    </script>
+</body> -->

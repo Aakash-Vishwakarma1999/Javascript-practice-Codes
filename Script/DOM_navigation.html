@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="parent">
+        <p id="first">First</p>
+        <p id="second">Second</p>
+        <p id="third">Third</p>
+    </div>
+
+    <script>
+        const child = document.getElementById("first");
+        const child2 = document.getElementById("parent");
+
+        console.log(child.parentElement);
+        console.log(child.parentNode);
+        console.log(child2.parentNode);
+        
+    </script>
+</body>
+
+</html>
+
+<!-- /// 1. Selecting Elements -->
+
+<!-- <body>
+    <div id="parent">
+        <p id="first">First</p>
+        <p id="second">Second</p>
+        <p id="third">Third</p>
+    </div>
+
+    <script>
+        console.log(document.getElementById("parent")); // o/p==> <div id="parent">...</div>
+        console.log(document.getElementsByClassName("className"));
+        console.log(document.getElementsByTagName("p")); // o/p HTMLCollection(3) [p#first, p#second, p#third, first: p#first, second: p#second, third: p#third]
+        console.log(document.querySelector("#parent")); //used when you want to get the first element which matches o/p==> <div id="parent">...</div>
+        console.log(document.querySelectorAll("p")); // selects all elements with p tag  o/p==> NodeList(3) [p#first, p#second, p#third]
+    </script>
+</body> -->
+
+
+<!-- 2. Parent Navigation -->
