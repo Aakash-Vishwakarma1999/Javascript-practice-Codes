@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    <style>
+        div{
+            width: 300px;
+            height: 60px;
+            display: inline-block;
+            padding:20px;
+            background-color: blue;
+            color: white;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>        
+    </head>
+    <body>
+      
+        <div id="divE" 
+        
+        onmouseup="eHandler()">Click Events</div>
+      
+       
+    <script> 
+    // here we have to for eg press the alt key and then click on the text to get the output of which key is pressed
+     function eHandler(){
+        let msg='';
+ 
+        if(event.altKey){
+           msg=msg + "[Alter]";
+        } 
+        if(event.ctrlKey){
+            msg=msg + "[Control]";
+        } 
+        if(event.shiftKey){
+            msg=msg+ "[Shift]";
+        }
+        if(event.altKey && event.shiftKey){
+            msg=msg+ "[Alt + Shift]";
+        }
+        document.getElementById("divE").innerHTML = msg;
+       
+     }
+ 
+    </script>    
+    </body>
+</html>

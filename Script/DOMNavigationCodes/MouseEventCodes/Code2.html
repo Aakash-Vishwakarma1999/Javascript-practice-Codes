@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    <style>
+        div{
+            width: 300px;
+            height: 60px;
+            display: inline-block;
+            padding:20px;
+            background-color: blue;
+            color: white;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>        
+    </head>
+    <body>
+        <!--onmousedown: on mouse click , onmouseup: on mouse release  -->
+        <div id="divE" 
+        onmousedown="eHandler('Mouse Down')"
+        onmouseup="eHandler('Mouse Up')">Click Events</div>
+    <script>
+     function eHandler(msg){
+         document.getElementById("divE").innerHTML = msg;
+     }
+    </script>    
+    </body>
+</html>
