@@ -1,0 +1,288 @@
+1) What are Core and Shared modules? Explain the difference with practical example
+2) Give a practical example of fromEvent operator
+3) Practical use cases of pure and impure pipes in industry
+4) What is access token and refresh token?
+5) How can you improve Angular application performance?
+6) What is Angular Universal and why is it used?
+7) How can you dynamically load a component in Angular?
+8) How do you create a custom pipe in Angular? Write code
+9) What is the role of Injector in Angular?
+10) What are Angular Guards and their different types?
+11) What is trackBy in ngFor and why is it important?
+12) What is ngZone in Angular?
+13) Angular lifecycle hooks and their real usage
+14) Difference between template-driven and reactive forms
+15) Explain Angular change detection mechanism
+16) Purpose of @Input and @Output decorators
+17) Hot vs Cold Observables
+18) Create a service in Angular and perform CRUD operations
+Write generic reactive form code with validations
+19) Can we write [ngIf] ? If yes, how? If no, explain
+20) Difference between constructor and ngOnInit
+21) How do you secure Angular applications from XSS attacks?
+22) Explain RxJS operators
+23) Difference between ViewChild and ContentChild
+24) How would you debug an Angular application?
+25) Scenario-based questions on: asked to write below syntax 
+switchMap , concatMap, mergeMap, forkJoin
+26) Write code where API fails first time and succeeds second time
+
+Angular Interviews Are Not About Basics Anymore, Interviewers are checking:
+Fundamental understanding, RxJS depth, Performance optimization, Real project experience, Debugging skills
+As experience grows you should be ready for these kind of questions ?
+🔁 Repost this so more Angular developers can prepare better.
+👉 Follow me Chetan Jogi for more real Angular interview questions by company & preparation content
+
+
+
+→ What is Angular and why is it powerful?
+→ What are Angular lifecycle hooks? Which one runs first?
+→ Difference between ViewChild and ContentChild? When to use each?
+→ How do you pass data from parent → child → grandchild nested components?
+→ How do you pass data from child back to parent?
+→ What is dependency injection in Angular?
+→ What is a singleton in Angular services?
+→ Other design patterns — factory, observer, module, strategy.
+→ What is a Subject in RxJS? Types of subjects?
+→ Difference between observables and promises?
+→ What is NgRx? Common steps and what are effects?
+→ Have you used NgRx state management? How do you share data between components?
+→ How to optimize Angular apps?
+→ How to implement lazy loading in Angular?
+→ What are guards in Angular?
+→ What is interpolation? What happens if you pass an object inside interpolation?
+→ How do you handle project-level errors? What is the use of HTTP interceptors?
+→ What is RouterOutlet? What is route preloading? How to implement a 404 page?
+→ What is the entry point of an Angular application?
+→ Explain package.json and angular.json files.
+→ How do multiple environment configurations work (dev, qa, production)?
+→ What are the types of Angular forms and the benefits of each?
+→ How many types of compilers does Angular have? When to use JIT vs AoT?
+→ How do you debug an Angular app? How to disable source maps in production?
+
+
+🔹 Reverse a string
+🔹 Check if two strings are anagrams
+🔹 Group anagrams
+🔹 Find the first non-repeating character
+🔹 Flatten a nested array
+🔹 Implement debounce and throttle
+🔹 Deep clone an object
+🔹 Find duplicate elements in an array
+🔹 Merge two sorted arrays
+🔹 Implement custom map(), filter(), and reduce()
+🔹 Promise chaining and async/await problems
+🔹 Two Sum problem
+🔹 Longest substring without repeating characters
+
+
+
+Angular Interview Questions (IBM L1 Round) —  5 Years Experience
+
+One of my LinkedIn connections recently attended an IBM Angular interview and shared the questions he faced in the L1 round.
+Sharing this here so it helps others preparing for similar roles.
+
+1) Explain event loop with execution context and call stack
+2) JavaScript is single-threaded — then how does it handle asynchronous operations
+3) What is closure? Explain with example
+Output-based questions:
+let x = 11;
+function find() {
+if(true){
+let x = 12
+console.log(x)
+}
+console.log(x)
+}
+find()
+
+async function test() {
+console.log(1);
+await Promise.resolve().then(() => {
+console.log('promise');
+});
+setTimeout(() => {
+console.log('timeout');
+}, 0);
+console.log(2);
+}
+test()
+
+4)Mask email problem
+Input:
+['john.doe@gmail.com','aem@gmail.com',undefined,'ab@gmail.com','user123@yahoo.com',null]
+Output:
+['j******e@gmail.com','a@gmail.com','a*@gmail.com','u*****3@yahoo.com']
+
+5) What is change detection? Use case of OnPush
+6) What is zone.js
+7) If 3 widgets out of 5 are not loading in dashboard, how will you debug it
+How will you identify and fix memory leaks
+8) Angular application performance optimization techniques
+9) How will you protect application from XSS attacks
+10) How will you implement multi-layer encryption
+11) Difference between Subject, BehaviorSubject, ReplaySubject, and AsyncSubject
+12) forkJoin, mergeMap, swicthMap, concatMap and exhaustMap asked to wrote code with api call and asked to explain behavior in network tab
+13) as we have rxjs then what is need of signal , different type of signal, when to use set and update method to change value of signal
+14) What do you know about interceptors, can we use interceptors to achieve mocking 
+15) Demonstrate SCSS function, include, and mixin
+
+
+
+
+Role: Senior Angular Developer
+
+1. Shadowing In JavaScript
+2. Flatten deep nested object (not an array)
+3. Promise. race and promise.all questions
+4. Polyfills for map and reduce
+5. Use of CDN, how it works
+6. Prototype inheritance
+7. Performance improvements of Angular application
+8. Bottle necks of making the service files available to a global level, provided in vs declaring the services in the module
+9. View encapsulation, how it will match styles with browser
+10. Custom validators usage and reactive forms advantages 
+11. Renderer and Ngzone 
+12. Memory leaks and clean code challenges
+13. Integrating OpenAI API with an Angular application and challenges
+14. Testing related question Jasmina nd karma)
+15. Microfrontend Integration with different frameworks(React and Angular), then how we share the data between remotes, Routing, and shared modules 
+16. Complexity between ngrx, ngrx Data, and signals 
+17. application loading and running  process from entering the URL from the browser to loading the data from store(NGRX)
+
+
+
+What is OnPush Strategy in Angular?
+
+OnPush is an Angular Change Detection strategy that tells Angular to check and update a component only when its input data changes, an event occurs inside the component, or manual change detection is triggered. It helps reduce unnecessary component re-rendering and improves application performance.
+
+Why do we use OnPush Strategy in Angular?
+
+OnPush strategy is used to optimize Angular application performance by minimizing unnecessary change detection cycles. It is especially useful in large applications where multiple components are rendered frequently.
+
+For Example
+import { Component, ChangeDetectionStrategy, Input } from'@angular/core';
+
+@Component({
+ selector: 'app-user',
+ template: `<h2>{{ user }}</h2>`,
+ changeDetection: ChangeDetectionStrategy.OnPush
+})
+exportclassUserComponent {
+@Input() user!: string;
+}
+
+<app-user[user]="username"></app-user>
+
+In this example, Angular updates the component only when the username input value changes instead of checking it continuously.
+
+
+
+1) You fetched user data in one component, but another component also needs it. How will you avoid calling the API again?
+2) User submits a form (Create User). How will you: Send data to API
+Update UI after success, Show success/error message,Will you store response in state or not
+3) After login, where will you store JWT token? LocalStorage or NgRx Store
+4) How will you restore token after page refresh?
+5) You are managing a large list (1000+ items). Why would you use NgRx Entity? What problem does it solve?
+6) You have an API for update user. How many actions will you create and why?
+7) Why do we use selectors instead of directly accessing state?
+8) have you created any custom directive in your project, explain same?
+9) RxJS operators — I want to call multiple APIs based on previous API responses. How will you handle this? And where will you write this logic — Service file or Effects file?
+10) Have you worked on lazy loading? Explain it and write code for it.
+11) Explain change detection cycle.
+12) Life cycle hooks.
+13) How do you implement routing? Write code for it.
+14) How do you test your application?
+15) You created a form using Reactive Forms. How do you implement validations? How will you apply custom validation? Which built-in validations have you used?
+16) How do you deploy your code?
+17) Which Agile methodologies do you follow?
+18) Explain use of Object destructuring and Spread Operator
+19) how to achieve deep copy 
+20) are you aware of new Features from 17+ versions and asked to write a signal and change its value on button click
+
+
+
+1️⃣ Explain the Angular component lifecycle. Which hooks do you use most often?
+2️⃣ When would you use ngOnInit() vs ngAfterViewInit()?
+3️⃣ What causes memory leaks in Angular applications?
+4️⃣ What happens if you don’t unsubscribe from Observables? How do you prevent it?
+5️⃣ Explain the difference between switchMap, mergeMap, concatMap, and exhaustMap.
+6️⃣ In what scenario would you use switchMap()?
+7️⃣ Reactive Forms vs Template-driven Forms — when would you choose each?
+8️⃣ How do you create custom validators in Angular?
+9️⃣ How do Angular Route Guards work?
+🔟 Tricky Angular Question 👇
+You have:
+ngOnInit() {
+ console.log('Init');
+}
+
+ngAfterViewInit() {
+ console.log('After View');
+}
+👉 Which runs first, and why? 🤔
+1️⃣1️⃣ What causes ExpressionChangedAfterItHasBeenCheckedError?
+1️⃣2️⃣ How do you safely upgrade Angular versions in production projects?
+1️⃣3️⃣ How do you manage environment configurations across dev, QA, and production?
+1️⃣4️⃣ How do you implement i18n (internationalization) in Angular?
+1️⃣5️⃣ How would you debug an issue that only occurs in production but not locally?
+
+
+
+Round 1:
+1. How does the browser load the Angular application
+2. viewencapsulation
+3. content projection, viewchild
+4. What are Change detection strategies -  On push 
+5. How does Angular detect the changes in the zone-less environment 
+6. Difference between markForCheck() and detectChnages()
+7. Handle the bulk records using virtual scrolling and pagination, and limit the API result per page
+8. Conflicts on global error handling vs component level
+9. RxJS operators and Ngrx implementation 
+10. signals vs ngrx 
+11. DOM manipulations 
+12. How to implement the SOLID principles in an Angular application 
+
+Round 2:
+Machine Coding 
+Problem statement: Implement an expense inventory tracker 
+
+
+
+1) What is the latest JavaScript version you have used?
+2) Do you have exposure working in Vanilla JavaScript?
+3) What are ES6 features?
+4) What latest Angular version have you used?
+5) What are new features of Angular 21?
+6) What are directives?
+7) Explain lifecycle hooks in Angular.
+8) Which RxJS operators have you used?
+9) How to use RxJS in TypeScript if you want to handle errors and retry API up to 3 times?
+10) After subscribing, will you handle error or before subscribing?
+11) Explain complete flow — how response comes, subscribe works, and error handling happens.
+12) Before subscribing, how will you implement logic?
+13) Why do we use pipe before subscribing?
+14) Then why do we use map operator?
+15) What does filter operator do?
+16) How will you implement lazy loading in Angular?
+17) What are ways to optimize Angular application?
+18) Have you worked on Micro Frontend architecture?
+19) Difference between Signals and BehaviorSubject.
+20) Have you used BehaviorSubject in any real scenario?
+21) If I want to change CSS dynamically, how will you do it?
+22) Is ngClass the only way to change CSS dynamically?
+23) Create a custom directive to change background color on hover / unhover. How will you implement it?
+24) What exactly does HostListener do?
+25) I want to toggle element dynamically without using *ngIf. How will you do it?
+26) In a large Angular application, how do you pass data between components?
+27) Different ways to share data between components.
+28) What is Multi Provider Token?
+29) What are route guards?
+30) How will you implement Page Not Found route?
+31) How to set query parameters?
+32) Remove duplicate elements from array
+ arr = [1, 2, 2, 3, 4, 4, 5]
+ Asked to implement using both built-in method and for loop.
+33) How will you mock a service?
+34) Have you used Angular testing frameworks?
+35) What deployment activities have you handled?
