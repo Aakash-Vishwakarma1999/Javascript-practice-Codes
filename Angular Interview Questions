@@ -326,3 +326,55 @@ Problem statement: Implement an expense inventory tracker
 3️⃣3️⃣ How will you mock a service?
 3️⃣4️⃣ Have you used Angular testing frameworks?
 3️⃣5️⃣ What deployment activities have you handled?
+
+
+
+Latest JavaScript version you have used?
+Experience in Vanilla JavaScript?
+Explain ES6 features.
+Latest Angular version worked on?
+New features in Angular 21?
+What are directives in Angular?
+Explain Angular lifecycle hooks.
+Which RxJS operators have you used?
+How to handle errors and retry API call up to 3 times using RxJS?
+Error handling before subscribe or after subscribe?
+Explain complete RxJS flow:
+API response flow
+subscribe()
+error handling
+pipe()
+Why use pipe() before subscribe()?
+Purpose of map operator?
+What does filter operator do?
+How to implement lazy loading?
+Ways to optimize Angular applications?
+Experience with Micro Frontend architecture?
+Signals vs BehaviorSubject?
+Real-time use cases of BehaviorSubject?
+How to change CSS dynamically?
+Is ngClass the only way?
+Create custom directive for hover/unhover background color change.
+What does @HostListener do?
+Toggle element dynamically without using *ngIf.
+How do you pass data between components in large applications?
+Different ways to share component data?
+What is Multi Provider Token?
+Explain Route Guards.
+How to implement Page Not Found route?
+How to set Query Parameters?
+Remove duplicate elements from array:
+arr = [1,2,2,3,4,4,5]
+Using built-in methods
+Using for loop
+How will you mock a service?
+Angular testing frameworks used?
+Deployment activities handled?
+Mainly focused on:
+Angular Concepts
+RxJS
+Directives
+State Management
+Optimization
+Real-time scenarios
+JavaScript fundamentals
