@@ -286,3 +286,43 @@ Problem statement: Implement an expense inventory tracker
 33) How will you mock a service?
 34) Have you used Angular testing frameworks?
 35) What deployment activities have you handled?
+
+
+
+1️⃣ What is the latest JavaScript version you have used?
+2️⃣ Do you have exposure working in Vanilla JavaScript?
+3️⃣ What are ES6 features?
+4️⃣ What latest Angular version have you used?
+5️⃣ What are new features of Angular 21?
+6️⃣ What are directives?
+7️⃣ Explain lifecycle hooks in Angular.
+8️⃣ Which RxJS operators have you used?
+9️⃣ How to use RxJS in TypeScript if you want to handle errors and retry API up to 3 times?
+1️⃣0️⃣ After subscribing, will you handle error or before subscribing?
+1️⃣1️⃣ Explain complete flow — how response comes, subscribe works, and error handling happens.
+1️⃣2️⃣ Before subscribing, how will you implement logic?
+1️⃣3️⃣ Why do we use pipe before subscribing?
+1️⃣4️⃣ Then why do we use map operator?
+1️⃣5️⃣ What does filter operator do?
+1️⃣6️⃣ How will you implement lazy loading in Angular?
+1️⃣7️⃣ What are ways to optimize Angular application?
+1️⃣8️⃣ Have you worked on Micro Frontend architecture?
+1️⃣9️⃣ Difference between Signals and BehaviorSubject.
+2️⃣0️⃣ Have you used BehaviorSubject in any real scenario?
+2️⃣1️⃣ If I want to change CSS dynamically, how will you do it?
+2️⃣2️⃣ Is ngClass the only way to change CSS dynamically?
+2️⃣3️⃣ Create a custom directive to change background color on hover / unhover. How will you implement it?
+2️⃣4️⃣ What exactly does HostListener do?
+2️⃣5️⃣ I want to toggle element dynamically without using *ngIf. How will you do it?
+2️⃣6️⃣ In a large Angular application, how do you pass data between components?
+2️⃣7️⃣ Different ways to share data between components.
+2️⃣8️⃣ What is Multi Provider Token?
+2️⃣9️⃣ What are route guards?
+3️⃣0️⃣ How will you implement Page Not Found route?
+3️⃣1️⃣ How to set query parameters?
+3️⃣2️⃣ Remove duplicate elements from array
+ arr = [1, 2, 2, 3, 4, 4, 5]
+ Asked to implement using both built-in method and for loop.
+3️⃣3️⃣ How will you mock a service?
+3️⃣4️⃣ Have you used Angular testing frameworks?
+3️⃣5️⃣ What deployment activities have you handled?
