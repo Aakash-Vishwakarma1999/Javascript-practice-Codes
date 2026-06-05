@@ -1,6 +1,8 @@
 1) What are Core and Shared modules? Explain the difference with practical example
 2) Give a practical example of fromEvent operator
-3) Practical use cases of pure and impure pipes in industry
+3) Practical use cases of pure and impure pipes in industry? Have you created custom pipes?
+4. Authentication and Authorization? 
+5. Session Authentication vs Token Authentication?
 4) What is access token and refresh token?
 5) How can you improve Angular application performance?
 6) What is Angular Universal and why is it used?
